@@ -1,0 +1,96 @@
+[{
+    "id": 1,
+    "parentMenuId": 0,
+    "name": "homes",
+    "icon": "el-icon-message\r\n",
+    "alias": "首页",
+    "state": "/home",
+    "sort": 0,
+    "value": "/indexPage/homes",
+    "childs": null
+  },
+  {
+    "id": 2,
+    "parentMenuId": 0,
+    "name": "systemManage",
+    "icon": "el-icon-message\r\n",
+    "alias": "项目管理",
+    "state": "ENABLE",
+    "sort": 0,
+    "value": null,
+    "discription": "用于系统管理的菜单",
+    "createUserId": 1,
+    "childs": [{
+        "id": 3,
+        "parentMenuId": 2,
+        "name": "page",
+        "icon": "el-icon-loading",
+        "alias": "部门管理",
+        "state": "ENABLE",
+        "sort": 0,
+        "value": "/indexPage/page",
+        "discription": "用于权限管理的菜单",
+        "childs": null
+      },
+      {
+        "id": 4,
+        "parentMenuId": 2,
+        "name": "roleManage",
+        "icon": "el-icon-bell",
+        "alias": "角色管理",
+        "state": "ENABLE",
+        "sort": 1,
+        "value": "/indexPage/child",
+        "discription": "用于角色管理的菜单",
+        "childs": null
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "parentMenuId": 0,
+    "name": "systemManage1",
+    "icon": "el-icon-message\r\n",
+    "alias": "系统管理",
+    "state": "ENABLE",
+    "sort": 0,
+    "value": null,
+    "discription": "系统",
+    "childs": [{
+        "id": 7,
+        "parentMenuId": 9,
+        "name": "authManage1",
+        "icon": "el-icon-loading",
+        "alias": "系统权限",
+        "state": "ENABLE",
+        "sort": 0,
+        "value": "/indexPage/create",
+        "discription": "用于权限管理的菜单",
+        "childs": [{
+          "id": 17,
+          "parentMenuId": 7,
+          "name": "authManage1",
+          "icon": "el-icon-loading",
+          "alias": "菜单管理",
+          "state": "ENABLE",
+          "sort": 0,
+          "value": "/indexPage/create",
+          "discription": "用于权限管理的菜单",
+          "childs": null
+        }]
+      },
+      {
+        "id": 16,
+        "parentMenuId": 9,
+        "name": "roleManage1",
+        "icon": "el-icon-bell",
+        "alias": "系统日志",
+        "state": "ENABLE",
+        "sort": 1,
+        "value": "/indexPage/test",
+        "discription": "用于角色管理的菜单",
+        "childs": null
+      }
+    ]
+  }
+]

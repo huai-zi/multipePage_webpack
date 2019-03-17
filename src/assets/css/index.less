@@ -1,0 +1,241 @@
+@content: #053e5b;
+@import './page_table.less';
+
+#page {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: 0.9;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+
+  .clik_scole {
+    height: 40px;
+    line-height: 40px;
+    background: linear-gradient(#043d5a, @content);
+  }
+
+
+  .banner_img {
+    display: inline-block;
+    width: 200px;
+    padding: 0 10px;
+    transform: translateX(-20px) translatey(-2px);
+
+    img {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      padding-top: 9px;
+    }
+  }
+
+  .el-card {
+    border: none;
+  }
+
+  .el-dropdown-link {
+    cursor: pointer;
+    color: #409EFF;
+  }
+
+  .el-icon-arrow-down {
+    font-size: 12px;
+  }
+
+  .el-badge__content.is-fixed {
+    top: 20px;
+    right: 30px;
+  }
+
+  .iconfont {
+    font-size: 25px;
+    margin-right: 20px;
+  }
+
+  .goOut:hover {
+    color: #fff;
+  }
+
+  [class*=" el-icon-"],
+  [class^="el-icon-"] {
+    font-size: 20px;
+  }
+
+  .el-radio-button__inner {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+  }
+
+  .el-radio-button__inner {
+    width: 100%;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .el-menu {
+    border: none;
+    background: transparent;
+    color: #fff;
+  }
+
+  .el-menu-item {
+    color: #fff;
+  }
+
+  #home .el-menu-item {
+    font-size: 16px;
+  }
+
+  .el-menu-item:focus,
+  .el-menu-item:hover,
+  .el-submenu__title:hover {
+    background-color: transparent;
+  }
+
+  .el-submenu__title {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .el-menu-item * {
+    font-size: 16px;
+  }
+
+  .el-menu-item.is-active {
+    background-color: #000C17;
+    border-left: 4px solid #1d82fb;
+  }
+
+  .el-menu-item i,
+  .el-submenu__title i {
+    color: #fff;
+    width: 24px;
+    font-size: 18px;
+    margin-right: 5px;
+  }
+
+  .el-icon-bell:before,
+  .el-icon-search:before {
+    display: inline-block;
+  }
+
+
+
+  .content-body {
+    width: calc(100% - 200px);
+    height: 100%;
+    /* padding-top: 70px; */
+  }
+
+  .goOut {
+    cursor: pointer;
+  }
+
+  .el-main {
+    background-color: #043d5b;
+    color: #333;
+    margin-left: 200px;
+    -webkit-transition: all 600ms;
+    -moz-transition: all 600ms;
+    -ms-transition: all 600ms;
+    -o-transition: all 600ms;
+    transition: all 600ms;
+    padding: 5px;
+  }
+
+  .search_index {
+    position: relative;
+
+    //  菜单搜索框
+    .search {
+      position: absolute;
+      right: 7px;
+      top: 0;
+      cursor: pointer;
+      background-color: #000C17;
+      border-radius: 10px;
+    }
+
+    .el-input__inner {
+      background-color: #000C17;
+      border: none;
+      border-radius: 20px;
+      padding: 0 10px;
+      color: #fff;
+
+    }
+  }
+}
+
+.el-container {
+  height: 100%;
+}
+
+.page_top {
+  margin-left: 64px;
+}
+
+.page_tops {
+  left: 64px !important;
+}
+
+.el-header,
+.el-footer {
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  z-index: 19;
+}
+
+.page_header {
+  font-size: 20px;
+  min-width: 900px;
+}
+
+// 模态框背景颜色
+.el-dialog__wrapper {
+  background: rgba(0, 0, 0, .5);
+}
+
+.el-aside {
+  overflow-x: hidden;
+  box-shadow: 0 5px 7px #333;
+  color: #fff;
+  line-height: 45px;
+  position: fixed;
+  z-index: 20;
+  transition: all 600ms;
+}
+
+// 深色主题
+#page.tables {
+
+  .el-header,
+  .el-footer {
+    background-color: #00557E;
+  }
+
+  .el-aside {
+    background: linear-gradient(@content, #022539);
+  }
+}
+
+// 白色主题
+#page.tables_bs {
+
+  .el-header,
+  .el-footer {
+    background-color: #001529;
+  }
+
+  .el-aside {
+    background: linear-gradient(@content, #001529);
+  }
+}

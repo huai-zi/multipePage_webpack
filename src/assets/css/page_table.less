@@ -1,0 +1,303 @@
+@color: #fff;
+@head: #02416a; // 表头颜色,悬停颜色
+
+.tab {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  overflow: auto;
+
+  // 表格分页字体颜色
+  .el-card {
+    background-color: transparent;
+  }
+
+  .avue-crud__menu {
+    display: none;
+  }
+
+  .el-pagination__jump .el-input__inner {
+    .el-card();
+  }
+
+  .el-pagination .el-select .el-input .el-input__inner {
+    .el-card();
+  }
+
+  .tableTop {
+    position: absolute;
+    top: 105px;
+  }
+
+  .el-button--primary.is-plain {
+    background: transparent;
+    border-color: transparent;
+  }
+
+
+  .el-pagination.is-background .btn-next,
+  .el-pagination.is-background .btn-prev,
+  .el-pagination.is-background .el-pager li {
+    .el-card();
+  }
+
+
+  // 自定义按钮文字
+  .avue-crud__tip {
+    display: none;
+  }
+
+  .iconfont {
+    margin-right: 5px !important;
+  }
+
+  // 搜索框
+  .el-button--small,
+  .el-button--small.is-round {
+    padding: 3px 15px;
+    transform: translatey(2px);
+  }
+
+  .menuRight {
+    position: absolute;
+    right: 130px;
+  }
+
+  .menuRight+.el-form-item .el-form-item__content button:last-child {
+    display: none;
+  }
+
+  .menuRight+.el-form-item {
+    float: right;
+  }
+
+  .iconDelete .el-icon-delete:before {
+    color: #fff;
+  }
+
+  .botton {
+    float: left;
+  }
+
+  th>.cell {
+    font-weight: 900;
+  }
+
+  // 搜索框
+  .el-input--mini input {}
+
+  .el-form-item__label {
+    font-size: 18px;
+  }
+
+  /* 
+  .el-icon-arrow-right:before {
+    content: "\E604";
+  } */
+}
+
+@newCon: #606266;
+@newBod: #DCDCDC;
+@newHea: #E6E6E6;
+
+// 深黑主题 
+.tables .tab {
+  background-color: #00557E;
+  border: 1px solid #016194;
+
+  .el-card {
+    color: @color;
+  }
+
+  // 表格边框
+  .tableBorder() {
+    border: 1px solid #267194;
+  }
+
+  // 表内样式字体颜色
+  .tab() {
+    background-color: #054a6b;
+    color: @color;
+  }
+
+  .el-table--border {
+    .tableBorder
+  }
+
+  .el-table__fixed-right::before,
+  .el-table__fixed::before {
+    background: transparent;
+  }
+
+  .el-table::before {
+    .tableBorder
+  }
+
+  .avue-crud .el-table th {
+    background-color: @head; // 表头颜色,悬停颜色
+    color: @color;
+    .tableBorder
+  }
+
+  .avue-crud .el-table td {
+    .tab;
+    .tableBorder
+  }
+
+  .avue-crud .el-table__row.hover-row td {
+    background-color: @head;
+  }
+
+  // 单机选中
+  .avue-crud .el-table__row.current-row td {
+    background-color: @head;
+  }
+
+  .el-button--primary.is-plain:focus,
+  .el-button--primary.is-plain:hover {
+    background-color: @head;
+    color: @color;
+  }
+
+  .el-button--primary.is-plain {
+    color: @color;
+  }
+
+
+  .el-pagination.is-background .btn-next,
+  .el-pagination.is-background .btn-prev,
+  .el-pagination.is-background .el-pager li {
+    border: 1px solid @color;
+    color: @color;
+  }
+
+  .el-form-item__label {
+    color: @color;
+  }
+
+  .el-pagination__total {
+    color: @color;
+  }
+
+  .el-pagination__jump {
+    color: @color;
+  }
+
+  .el-pagination__jump .el-input__inner {
+    color: @color;
+  }
+
+  .el-pagination .el-select .el-input .el-input__inner {
+    color: @color;
+  }
+
+  .el-icon-arrow-left:before {
+    color: @color;
+  }
+}
+
+// 白色主题
+.tables_bs .tab {
+  background-color: #fff;
+  border: 1px solid #F0F2F5;
+
+  .el-card {
+    color: @newCon;
+  }
+
+  // 表格边框
+  .tableBorder() {
+    border: 1px solid @newBod;
+  }
+
+  // 表内样式字体颜色
+  .tab() {
+    background-color: #fff;
+    color: @newCon;
+  }
+
+  .el-table--border {
+    .tableBorder
+  }
+
+  .el-table__fixed-right::before,
+  .el-table__fixed::before {
+    background: transparent;
+  }
+
+  .el-table::before {
+    .tableBorder
+  }
+
+  .avue-crud .el-table th {
+    background-color: @newHea; // 表头颜色,悬停颜色
+    color: @newCon;
+    .tableBorder
+  }
+
+  .el-table tr:nth-child(odd) {
+    background-color: #fff;
+  }
+
+  .el-table tr:nth-child(even) {
+    background-color: #F0F2F5;
+  }
+
+  .avue-crud .el-table td {
+
+    .tableBorder
+  }
+
+  .avue-crud .el-table__row.hover-row td {
+    background-color: @newHea;
+  }
+
+  // 单机选中
+  .avue-crud .el-table__row.current-row td {
+    background-color: @newHea;
+  }
+
+  /* 
+  .el-button--primary.is-plain:focus,
+  .el-button--primary.is-plain:hover {
+    background-color: @newHea;
+    color: @newCon;
+  }
+
+  .el-button--primary.is-plain {
+    color: @newCon;
+  } */
+
+
+  .el-pagination.is-background .btn-next,
+  .el-pagination.is-background .btn-prev,
+  .el-pagination.is-background .el-pager li {
+    border: 1px solid @newCon;
+    color: @newCon;
+  }
+
+  .el-form-item__label {
+    color: @newCon;
+  }
+
+  .el-pagination__total {
+    color: @newCon;
+  }
+
+  .el-pagination__jump {
+    color: @newCon;
+  }
+
+  .el-pagination__jump .el-input__inner {
+    color: @newCon;
+  }
+
+  .el-pagination .el-select .el-input .el-input__inner {
+    color: @newCon;
+  }
+
+  .el-icon-arrow-left:before {
+    color: @newCon;
+  }
+}
