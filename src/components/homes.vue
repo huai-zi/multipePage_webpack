@@ -226,8 +226,10 @@
         },
       }
     },
-    created() {},
     computed: {},
+    mounted() {
+      console.log(this.$http);
+    },
     methods: {
       getCheckedKeys() {
         // 通过keys获取权限选中节点信息

@@ -1,0 +1,57 @@
+/**
+  * 树形结构的样式修改
+  * 使用方法:对父元素加上类名keyword
+  * 2019年3月18日09:07:32
+*/
+// 深黑色主题
+@newCon: #606266;
+@newHea: #E6E6E6;
+@color: #fff;
+
+// 树形关键字搜索
+.keyword .el-input__inner {
+  margin: 10px 0;
+}
+
+.tables .keyword {
+
+  // 树形关键字
+  .el-input__inner {
+    background-color: transparent;
+    color: @color;
+  }
+
+  .el-tree .is-current>div:first-child,
+  .el-tree-node__content:hover {
+    color: #333;
+    background-color: @color;
+  }
+
+  .el-tree {
+    padding: 10px;
+    background-color: #054a6b;
+    color: @color;
+  }
+
+}
+
+// 白色主题
+.tables_bs .keyword {
+
+  // 树形关键字
+  .el-input__inner,
+  .el-tree {
+    background-color: transparent;
+    color: @newCon;
+  }
+
+  .el-tree .is-current>div:first-child,
+  .el-tree-node__content:hover {
+    color: #409EFF;
+    background-color: @newHea;
+  }
+
+  .el-tree {
+    padding: 10px;
+  }
+}

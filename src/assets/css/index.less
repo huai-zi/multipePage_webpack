@@ -1,3 +1,6 @@
+/**
+  * 的
+*/
 @content: #053e5b;
 @import './page_table.less';
 
@@ -13,9 +16,7 @@
   .clik_scole {
     height: 40px;
     line-height: 40px;
-    background: linear-gradient(#043d5a, @content);
   }
-
 
   .banner_img {
     display: inline-block;
@@ -123,8 +124,6 @@
     display: inline-block;
   }
 
-
-
   .content-body {
     width: calc(100% - 200px);
     height: 100%;
@@ -169,6 +168,12 @@
 
     }
   }
+
+  // 隐藏出现的菜单栏图形图标问题
+  .el-submenu .el-icon-arrow-right:before {
+    display: none;
+  }
+
 }
 
 .el-container {
@@ -192,6 +197,7 @@
   position: fixed;
   width: 100%;
   z-index: 19;
+  box-shadow: 0 0 5px #333;
 }
 
 .page_header {
@@ -212,6 +218,12 @@
   position: fixed;
   z-index: 20;
   transition: all 600ms;
+  z-index: 0;
+}
+
+// 悬停框
+.el-tooltip__popper.is-dark {
+  top: 43px !important;
 }
 
 // 深色主题
@@ -225,6 +237,10 @@
   .el-aside {
     background: linear-gradient(@content, #022539);
   }
+
+  .clik_scole {
+    background: linear-gradient(#043d5a, @content);
+  }
 }
 
 // 白色主题
@@ -235,7 +251,8 @@
     background-color: #001529;
   }
 
-  .el-aside {
-    background: linear-gradient(@content, #001529);
+  .el-aside,
+  .clik_scole {
+    background-color: #001529;
   }
 }

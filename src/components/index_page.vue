@@ -10,14 +10,14 @@
               <el-tooltip class="item" effect="dark" content="搜索" placement="bottom">
                 <i class="el-icon-search m-r-20"></i>
               </el-tooltip>
-              <el-tooltip class="item" effect="dark" content="微信" placement="bottom">
+              <el-tooltip class="item" effect="dark" @click.native='themeSwith(1)' content="微信" placement="bottom">
                 <i class="iconfont m-r-20">&#xe637;</i>
               </el-tooltip>
-              <el-tooltip class="item" @click.native='themeSwith' effect="dark" content="主题换色" placement="bottom">
+              <el-tooltip class="item" @click.native='themeSwith(0)' effect="dark" content="主题换色" placement="bottom">
                 <i class="iconfont m-r-20">&#xeb6e;</i>
               </el-tooltip>
               <el-tooltip class="item" effect="dark" content="通知" placement="bottom">
-                <el-badge :value="4" :max="10" class="item">
+                <el-badge :value="notice" :max="10" class="item">
                   <i class="el-icon-bell m-r-20"></i>
                 </el-badge>
               </el-tooltip>
@@ -77,18 +77,23 @@
         </el-aside>
         <!--内容显示-->
         <el-main class="content-body" ref='content'>
-          <router-view></router-view>
+            <router-view></router-view>
         </el-main>
       </el-container>
     </el-container>
 
     <!-- 主题切换 -->
-    <el-dialog title="主题切换" width="50%" :visible.sync="dialogVisible" :modal='!dialogVisible'>
-      <span>
-        <el-radio-group @change='themeChange' v-model="radio2">
+    <el-dialog :title="modelTitle" width="50%" :visible.sync="dialogVisible" :modal='!dialogVisible'>
+      <span class='text-center'>
+        <!-- 换肤 -->
+        <el-radio-group @change='themeChange' v-model="radio2" v-show='wxBgc'>
           <el-radio :label="6">深黑</el-radio>
           <el-radio :label="9">白色</el-radio>
         </el-radio-group>
+        <!-- 微信 -->
+        <el-row v-show='!wxBgc'>
+          微信图片
+        </el-row>
       </span>
     </el-dialog>
   </div>
@@ -106,6 +111,9 @@
       return {
         isCollapse: false,
         cursor_back: true,
+        wxBgc: true,
+        wxBgcTitle: ['主题切换', '微信'],
+        modelTitle: '',
         active: '',
         input2: '', //菜单搜索
         editableTabs2: [{
@@ -126,8 +134,18 @@
         else util.setTheme('tables');
 
       },
-      themeSwith() {
-        // 主题模态框打开
+      themeSwith(dis) {
+        /**
+         * 主题模态框打开
+         * 参数:0为换肤 1为微信
+         */
+        if (dis === 0) {
+          this.wxBgc = true;
+          this.modelTitle = this.wxBgcTitle[dis];
+        } else {
+          this.wxBgc = false;
+          this.modelTitle = this.wxBgcTitle[dis];
+        }
         this.dialogVisible = true;
         console.log(this.radio2);
       },
@@ -191,7 +209,12 @@
     components: {
       NavMenu: NavMenu
     },
-    computed: {},
+    computed: {
+      notice() {
+        // 通知信息展示
+        return this.$store.getters.notice
+      }
+    },
     mounted() {
       this.leftMenus = menu;
       this.tabIndex = this.$route.name;

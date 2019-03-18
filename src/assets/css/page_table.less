@@ -1,6 +1,12 @@
+/**
+  * 表格展示样式修改
+  * 使用方法:对父元素添加类名tab
+  * 2019年3月18日09:08:35
+*/
 @color: #fff;
 @head: #02416a; // 表头颜色,悬停颜色
 
+// 共有属性值
 .tab {
   width: 100%;
   height: 100%;
@@ -91,10 +97,6 @@
     font-size: 18px;
   }
 
-  /* 
-  .el-icon-arrow-right:before {
-    content: "\E604";
-  } */
 }
 
 @newCon: #606266;
@@ -160,11 +162,6 @@
     color: @color;
   }
 
-  .el-button--primary.is-plain {
-    color: @color;
-  }
-
-
   .el-pagination.is-background .btn-next,
   .el-pagination.is-background .btn-prev,
   .el-pagination.is-background .el-pager li {
@@ -172,30 +169,20 @@
     color: @color;
   }
 
-  .el-form-item__label {
-    color: @color;
-  }
-
-  .el-pagination__total {
-    color: @color;
-  }
-
-  .el-pagination__jump {
-    color: @color;
-  }
-
-  .el-pagination__jump .el-input__inner {
-    color: @color;
-  }
-
-  .el-pagination .el-select .el-input .el-input__inner {
-    color: @color;
-  }
-
+  .el-pagination .el-select .el-input .el-input__inner,
+  .el-pagination__jump .el-input__inner,
+  .el-pagination__jump,
+  .el-pagination__total,
+  .el-button--primary.is-plain,
+  .el-form-item__label,
   .el-icon-arrow-left:before {
     color: @color;
   }
+
+
+
 }
+
 
 // 白色主题
 .tables_bs .tab {
@@ -245,7 +232,6 @@
   }
 
   .avue-crud .el-table td {
-
     .tableBorder
   }
 
@@ -277,27 +263,14 @@
     color: @newCon;
   }
 
+  .el-icon-arrow-left:before,
+  .el-pagination .el-select .el-input .el-input__inner,
+  .el-pagination__jump .el-input__inner,
+  .el-pagination__jump,
+  .el-pagination__total,
   .el-form-item__label {
     color: @newCon;
   }
 
-  .el-pagination__total {
-    color: @newCon;
-  }
 
-  .el-pagination__jump {
-    color: @newCon;
-  }
-
-  .el-pagination__jump .el-input__inner {
-    color: @newCon;
-  }
-
-  .el-pagination .el-select .el-input .el-input__inner {
-    color: @newCon;
-  }
-
-  .el-icon-arrow-left:before {
-    color: @newCon;
-  }
 }
