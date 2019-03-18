@@ -1,7 +1,8 @@
 export default {
   state: {
     fullLoading: false,
-    notice: 3
+    notice: 3,
+    state: 404
   },
   mutations: {
     loading(state, val) {
@@ -11,6 +12,10 @@ export default {
     noticeLook(state, val) {
       // 通知数量
       state.notice = val;
+    },
+    stateCode(state, val) {
+      // 页面返回状态码
+      state.state = val;
     }
   },
   actions: {

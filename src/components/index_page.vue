@@ -101,8 +101,10 @@
 
 <script>
   import '@/assets/css/index.less'
+  import '@/assets/css/themeWhite.less'
+  import '@/assets/css/themeBlack.less'
+  import '@/assets/css/index.less'
   import menu from '../assets/json/menu.json'
-  import img from '@/assets/imgs.json';
   import NavMenu from './menu.vue';
   import * as util from '@/util';
   export default {

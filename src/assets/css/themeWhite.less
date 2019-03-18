@@ -1,0 +1,94 @@
+// 白色主题
+@newCon: #606266;
+@newBod: #DCDCDC;
+@newHea: #E6E6E6;
+
+#page.tables_bs {
+
+  // 顶部背景色
+  .el-header,
+  .el-footer {
+    background-color: #001529;
+  }
+
+  //左侧背景色
+  .el-aside,
+  .clik_scole {
+    background-color: #001529;
+  }
+}
+
+// 表格主题
+.tables_bs .tab {
+  // 框内的背景颜色
+  background-color: #fff;
+  border: 1px solid #F0F2F5;
+
+  // 分页字体颜色
+  .el-card {
+    color: @newCon;
+  }
+
+  // 表格边框
+  .tableBorder() {
+    border: 1px solid @newBod;
+  }
+
+  // 表内样式字体颜色
+  .tab() {
+    background-color: #fff;
+    color: @newCon;
+  }
+
+  .el-table__fixed-right::before,
+  .el-table__fixed::before {
+    background: transparent;
+  }
+
+  .el-table::before,
+  .avue-crud .el-table td,
+  .el-table--border,
+  .avue-crud .el-table th {
+    .tableBorder
+  }
+
+  .avue-crud .el-table th {
+    background-color: @newHea; // 表头颜色,悬停颜色
+    color: @newCon;
+  }
+
+  // 表格行内背景颜色渐变
+  .el-table tr:nth-child(odd) {
+    background-color: #fff;
+  }
+
+  .el-table tr:nth-child(even) {
+    background-color: #F0F2F5;
+  }
+
+  .avue-crud .el-table__row.hover-row td {
+    background-color: @newHea;
+  }
+
+  // 单机选中,悬停变色
+  .avue-crud .el-table__row.current-row td,
+  .avue-crud .el-table__row.hover-row td {
+    background-color: @newHea;
+  }
+
+  .el-pagination.is-background .btn-next,
+  .el-pagination.is-background .btn-prev,
+  .el-pagination.is-background .el-pager li {
+    border: 1px solid @newCon;
+    color: @newCon;
+  }
+
+  .el-icon-arrow-left:before,
+  .el-pagination .el-select .el-input .el-input__inner,
+  .el-pagination__jump .el-input__inner,
+  .el-pagination__jump,
+  .el-pagination__total,
+  .el-form-item__label {
+    color: @newCon;
+  }
+}

@@ -1,0 +1,94 @@
+// 深色主题
+@content: #053e5b;
+@color: #fff;
+@head: #02416a; // 表头颜色,悬停颜色
+
+#page.tables {
+
+  // 顶部背景色
+  .el-header,
+  .el-footer {
+    background-color: #00557E;
+  }
+
+  //左侧背景色
+  .el-aside {
+    background: linear-gradient(@content, #022539);
+  }
+
+  .clik_scole {
+    background: linear-gradient(#043d5a, @content);
+  }
+}
+
+// 表格主题 
+.tables .tab {
+  background-color: #00557E;
+  border: 1px solid #016194;
+
+  .el-card {
+    color: @color;
+  }
+
+  // 表格边框
+  .tableBorder() {
+    border: 1px solid #267194;
+  }
+
+  // 表内样式字体颜色
+  .tab() {
+    background-color: #054a6b;
+    color: @color;
+  }
+
+
+  .el-table__fixed-right::before,
+  .el-table__fixed::before {
+    background: transparent;
+  }
+
+  .el-table::before,
+  .avue-crud .el-table td,
+  .avue-crud .el-table th,
+  .el-table--border {
+    .tableBorder
+  }
+
+  .avue-crud .el-table th {
+    background-color: @head; // 表头颜色,悬停颜色
+    color: @color;
+  }
+
+  .avue-crud .el-table td {
+    .tab;
+  }
+
+  // 单机选中,悬停变色
+  .avue-crud .el-table__row.current-row td,
+  .avue-crud .el-table__row.hover-row td {
+    background-color: @head;
+  }
+
+  .el-button--primary.is-plain:focus,
+  .el-button--primary.is-plain:hover {
+    background-color: @head;
+    color: @color;
+  }
+
+  .el-pagination.is-background .btn-next,
+  .el-pagination.is-background .btn-prev,
+  .el-pagination.is-background .el-pager li {
+    border: 1px solid @color;
+    color: @color;
+  }
+
+  .el-pagination .el-select .el-input .el-input__inner,
+  .el-pagination__jump .el-input__inner,
+  .el-pagination__jump,
+  .el-pagination__total,
+  .el-button--primary.is-plain,
+  .el-form-item__label,
+  .el-icon-arrow-left:before {
+    color: @color;
+  }
+}

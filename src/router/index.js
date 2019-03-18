@@ -11,11 +11,11 @@ import login from '@/components/login'
 import system from '@/components/system'
 import sales from '@/components/sales'
 import personal from '@/components/personal'
+import state from '@/components/state'
 
 Vue.use(Router);
 //页面路由
 //全局守卫
-
 
 export default new Router({
   //mode: 'history',
@@ -62,7 +62,7 @@ export default new Router({
           component: sales
         },
         {
-          path: "/indexPage/test",
+          path: "/indexPage/test/:page",
           name: "test",
           component: test
         },
@@ -82,5 +82,10 @@ export default new Router({
       path: '/',
       redirect: 'login'
     },
+    {
+      path:'*',
+      name:'state',
+      component:state
+    }
   ]
 })

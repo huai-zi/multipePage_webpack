@@ -1,12 +1,25 @@
 <template>
   <div id="test">
-    <iframe id="ifra" src="home.html" frameborder="0"></iframe>
+    <iframe id="ifra" src="" ref='ifra' frameborder="0"></iframe>
   </div>
 </template>
 
 <script>
   export default {
-    name: "test"
+    name: "test",
+    data() {
+      return {
+
+      }
+    },
+    methods: {
+      append(url) {
+        this.$refs.ifra.src = url;
+      }
+    },
+    mounted() {
+      this.append('home.html');
+    }
   }
 
 </script>

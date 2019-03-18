@@ -28,23 +28,15 @@ Vue.prototype.$http = http;
 Vue.config.productionTip = false;
 //全局守卫,页面加载的时候,监控路由是否相同
 // router.beforeEach((to, from, next) => {
-//使用过程为,先判断vuex里面一条数据,判断是否登陆
-// console.log(to);
-// if (to.path === '/page' || to.path === '/') {
-//   next();//进行登陆,直接渲染界面
-// } else {
-//   alert('还没有登陆哦')
-// }
-// console.log(store.state.acc.active);
+//   /*   使用过程为,
+//     先判断vuex里面一条数据,
+//     判断是否登陆 */
+//     console.log(to);
+//     console.log(from);
+//     next()
 // });
 
-//后置钩子,进入组件之后会调用钩子函数
-// router.afterEach((to, from) => {
-//   console.log(to);
-//   console.log(from);
-//   alert('after Each');
-//
-// })
+
 /* eslint-disable no-new */
 import './directive/directive.js';
 
@@ -55,5 +47,7 @@ new Vue({
   components: {
     App
   },
-  template: '<App/>'
+  render(h) {
+    return h(App, {});
+  }
 });

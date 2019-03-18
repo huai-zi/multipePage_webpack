@@ -2,6 +2,9 @@ import axios from 'axios';
 import {
   store
 } from '@/store/store'
+import {
+  Message
+} from 'element-ui';
 
 // 添加请求拦截器
 axios.interceptors.request.use(function (config) {
@@ -26,6 +29,15 @@ axios.interceptors.request.use(function (config) {
 axios.interceptors.response.use(function (response) {
   // 对响应数据做点什么
   store.commit('loading', false);
+
+  const status = Number(res.status) || 200;
+  if (status !== 200 || res.data.code === 1) {
+    Message({
+      'message': message,
+      'type': 'error'
+    });
+  }
+
   return response;
 }, function (error) {
   // 对响应错误做点什么

@@ -3,4 +3,5 @@
  */
 export const getters = {
   "notice": state => state.index_page.notice,
+  "state": state => state.index_page.state,
 }
